@@ -1,0 +1,71 @@
+.header {
+    padding: 10px 0;
+    border-bottom: 1px solid #dbdbdb;
+    position: relative;
+    background: #fff;
+
+    &__row {
+        @include d-flex();
+        position: relative;
+    }
+
+    &__btns {
+        @include center-flex();
+    }
+
+    &__btn--account-img{
+        width: 100%;
+        height: 100%;
+    }
+
+    &__btn--responsivep-direct{
+        @include btn-remove-bg();
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__btn {
+        cursor: pointer;
+        width: 22px;
+        height: 22px;
+        padding: 0;
+        @include center();
+        @include btn-remove-bg();
+        overflow: hidden;
+
+        &:not(:last-child){
+            margin-right: 22px;
+        }
+    }
+
+    &__btn--account {
+        border-radius: 50%;
+    }
+
+}
+
+@media screen and (max-width: 576px){
+    .header__btn--responsivep-direct{
+        display: flex;
+    }
+    .header__btn--direct{
+        display: none;
+    }
+
+    .header__btns{
+        justify-content: space-between;
+        width: 100%;
+        position:fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+        padding: 10px 20px;
+        background: #fff;
+        border-top: 1px solid #afadad;
+    }
+
+    .header__btn:not(:last-child){
+        margin-right: 0;
+    }
+}

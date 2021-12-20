@@ -1,0 +1,110 @@
+.form {
+    border: 1px solid #e4e1e1;
+    border-radius: 3px;
+    padding: 3px 12px;
+    width: 350px;
+    height: 35px;
+    background: #f8f8f8;
+    position: relative;
+    @include d-flex();
+
+    &__label {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__search-icon{
+        color: $color-primary;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }   
+
+    &__close-btn{
+        padding: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: #b4b3b3;
+        border-radius: 50%;
+        color: #fff;
+        padding: 2px;
+        border: none;
+        transform: translateX(8px);
+    }
+
+    &__loading-gif{
+        position:absolute;
+        top: 50%;
+        right: 4.5px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        opacity: 0;
+    }
+
+    &__search-inp {
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        @include btn-remove-bg();
+        color: $color-general;
+
+        &::placeholder{
+            color: $color-primary;
+            font-size: 14px;
+            font-weight: 300;
+            transform: translateY(-2px);
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__prev{
+        display: none;
+        font-size: 25px;
+        align-items: center;
+        justify-content: center;
+        @include btn-remove-bg();
+        color: $color-primary;
+        padding: 0 10px 0 0;
+        position: relative;
+        margin-right: 10px;
+
+        &::before{
+            content: "";
+            height: 33.5px;
+            width: 1px;
+            position:absolute;
+            right: 0;
+            background: $color-primary;
+        }
+    }
+}
+
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+@media screen and (max-width:768px){
+    .form{
+        position:absolute;
+        left: 0;
+        width: 100%;
+        transform: translateY(-150%);
+        transition: all 0.4s ease;
+
+        &__prev{
+            display: flex;
+        }
+    }
+
+}

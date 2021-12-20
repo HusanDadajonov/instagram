@@ -3,3 +3,42 @@
   margin: 0;
   list-style: none;
 }
+
+@mixin d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+}
+
+
+@mixin btn-remove-bg {
+  background: none;
+  border: none;
+}
+
+@mixin switch-follow-btn {
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: capitalize;
+  color: #0095F6;
+}
+
+@mixin text-ellipsis {
+  text-transform: lowercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+

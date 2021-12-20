@@ -4,12 +4,126 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson</title>
+  <title>Instagram</title>
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/flexboxgrid.min.css">
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-
+  <section class="hero">
+    <header class="hero__header header">
+      <div class="header__container container">
+        <div class="header__row row">
+          <a class="header__logo-link" href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="logo" width="103" height="23">
+          </a>
+          <form class="header__form form" action="https://echo.htmlacademy.ru/" method="post">
+            <span class="form__prev"><i class='bx bx-arrow-back'></i></span>
+            <span class="form__search-icon"><i class='bx bx-search'></i></span>
+            <label class="form__label" for="search-inp">
+              <input class="form__search-inp" type="search" name="searched-things" id = "search-inp" placeholder="Search" autocomplete="off">
+            </label>
+            <button class="form__close-btn"><i class='bx bx-x'></i></button>
+            <img class="form__loading-gif" src="img/loading.gif" alt="loading-gif">
+          </form>
+          <div class="header__btns">
+            <button class="header__btn header__btn--home"><svg aria-label="Главная страница" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M22 23h-6.001a1 1 0 01-1-1v-5.455a2.997 2.997 0 10-5.993 0V22a1 1 0 01-1 1H2a1 1 0 01-1-1V11.543a1.002 1.002 0 01.31-.724l10-9.543a1.001 1.001 0 011.38 0l10 9.543a1.002 1.002 0 01.31.724V22a1 1 0 01-1 1z"></path></svg></button>
+            <button class="header__btn header__btn--direct"><svg aria-label="Messenger" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M12.003 2.001a9.705 9.705 0 110 19.4 10.876 10.876 0 01-2.895-.384.798.798 0 00-.533.04l-1.984.876a.801.801 0 01-1.123-.708l-.054-1.78a.806.806 0 00-.27-.569 9.49 9.49 0 01-3.14-7.175 9.65 9.65 0 0110-9.7z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.739"></path><path d="M17.79 10.132a.659.659 0 00-.962-.873l-2.556 2.05a.63.63 0 01-.758.002L11.06 9.47a1.576 1.576 0 00-2.277.42l-2.567 3.98a.659.659 0 00.961.875l2.556-2.049a.63.63 0 01.759-.002l2.452 1.84a1.576 1.576 0 002.278-.42z" fill-rule="evenodd"></path></svg></button>
+            <button class="header__btn header__btn--add-post"><svg aria-label="Новая публикация" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line></svg></button>
+            <button class="header__btn header__btn--see-video"><svg aria-label="Найти людей" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="13.941 13.953 7.581 16.424 10.06 10.056 16.42 7.585 13.941 13.953" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon><polygon fill-rule="evenodd" points="10.06 10.056 13.949 13.945 7.581 16.424 10.06 10.056"></polygon><circle cx="12.001" cy="12.005" fill="none" r="10.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle></svg></button>
+            <button class="header__btn header__btn--follows-likes"><svg aria-label="Что нового" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg></button>
+            <button class="header__btn header__btn--account"><img class="header__btn--account-img" src="img/me.jpg" alt="your-account-img"></button>
+          </div>
+          <button class="header__btn--responsivep-direct"><svg aria-label="Messenger" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M12.003 2.001a9.705 9.705 0 110 19.4 10.876 10.876 0 01-2.895-.384.798.798 0 00-.533.04l-1.984.876a.801.801 0 01-1.123-.708l-.054-1.78a.806.806 0 00-.27-.569 9.49 9.49 0 01-3.14-7.175 9.65 9.65 0 0110-9.7z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.739"></path><path d="M17.79 10.132a.659.659 0 00-.962-.873l-2.556 2.05a.63.63 0 01-.758.002L11.06 9.47a1.576 1.576 0 00-2.277.42l-2.567 3.98a.659.659 0 00.961.875l2.556-2.049a.63.63 0 01.759-.002l2.452 1.84a1.576 1.576 0 002.278-.42z" fill-rule="evenodd"></path></svg></button>
+        </div>
+      </div>
+    </header>
+  </section>
+  <main>
+    <section class="contents">
+      <div class="contents__container container">
+        <div class="contents__row row between-xs">
+          <div class="contents__col">
+            <div class="contents__accounts accounts">
+              <div class="accounts__wrapper">
+                <button class="accounts__slider-btn accounts__slider-btn--left" onclick="slider(false)"><i class='bx bx-chevron-left' ></i></button>
+                <button class="accounts__slider-btn accounts__slider-btn--right" onclick="slider(true)"><i class='bx bx-chevron-right'></i></button>
+                <ul class="accounts__list"></ul>
+              </div>
+            </div>
+            <div class="contents__post post">
+              <ul class="post__list">
+                <!-- <li class="post__item">
+                  <div class="post__account">
+                    <div class="post__account-box">
+                      <button class="post__account-btn accounts__btn"><img class="post__account-img" src="img/me.jpg" alt="me-img"></button>
+                      <div class="post__texts">
+                        <a class="post__account-name" href="#">awdawa</a>
+                        <a class="post__tags" href="#">awdaw</a>
+                      </div>
+                    </div>
+                    <button class="post__btn"><svg aria-label="Дополнительно" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg></button>
+                  </div>
+                  <div class="post__slider">
+                    <div class="post__slider-item">
+                      <img class="post__like-gif" src="img/like-gif.gif" alt="like-gif">
+                      <img class="post__slider-img" src="img/post1.png" alt="post__slider-img">
+                    </div>
+                  </div>
+                  <div class="post__btns">
+                    <div class="post__btns-box">
+                      <button class="post__btn-bottom post__btn-bottom--like"><svg aria-label="Нравится" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg></button>
+                      <button class="post__btn-bottom post__btn-bottom--comment"><svg aria-label="Комментировать" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+                      <button class="post__btn-bottom post__btn-bottom--share"><svg aria-label="Поделиться публикацией" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg></button>
+                    </div>
+                    <button class="post__btn-save"><svg aria-label="Сохранить" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg></button>
+                  </div>
+                  <div class="post__likes">
+                    <p class="post__like-count"><span>343</span>likes</p>
+                    <div class="post__texts-box">
+                      <div class="row middle-xs">
+                        <a class="post__like-name" href="#">terrylu</a>
+                        <p class="post__desc">Imperdiet in sit rhoncus, eleifend daw tellus augue lectus potenti pellentesque</p>
+                      </div>
+                      <button class="post__desc-more">more</button>
+                    </div>
+                    <button class="post__view-comments">View all 100 comments</button>
+                    <time class="post__time">1 hour ago</time>
+                    <form class="post__form" action="https://echo.htmlacademy.ru/" method="post">
+                      <button class="post__smile-btn"><svg aria-label="Смайлик" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path></svg></button>
+                      <label class="post__label" for="comment">
+                        <input class="post__inp" type="text" name="comment" id="comment" placeholder="Add a comment..." autocomplete="off">
+                      </label>
+                      <button class="post__send-comment-btn">post</button>
+                    </form>
+                  </div>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+          <div class="contents__col col-xs-4">
+            <div class="contents__your-account your-account">
+              <button class="your-account__btn"><img class="your-account__img" src="img/me.jpg" alt="me-img"></button>
+              <div class="your-account__texts-box">
+                <a class="your-account__user-name" href="#">f_developer</a>
+                <p class="your-account__name">حسان 🖤 </p>
+              </div>
+              <button class="your-account__switch-btn">Switch</button>
+            </div>
+            <div class="contents__suggestions suggestions">
+              <div class="suggestions__texts-box">
+                <h3 class="suggestions__title">Suggestions For You</h3>
+                <button class="suggestions__see-all-btn">See All</button>
+              </div>
+              <ul class="suggestions__list"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/accounts.js"></script>
+  <script src="js/post.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
