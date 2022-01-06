@@ -1,0 +1,159 @@
+.content-post {
+    display: none;
+
+    &__btn-list {
+        padding: 10px 0;
+        margin: 0 0 20px 0;
+        margin-top: 40px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        list-style:none;
+        border-top: 2px solid #c2c0c0;
+    }
+
+    &__btn-item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+
+        &:not(:last-child){
+            margin-right: 60px;
+        }
+    }
+
+    &__btn-item--active span{
+        color: #000;
+    }
+    
+    &__btn-item--active svg{
+        fill: #000 !important;
+        color: #000 !important;
+    }
+
+    &__btn-item--active::before{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #000;
+        position:absolute;
+        left: 0;
+        top: -12.3px;
+    }
+
+    &__btn-item svg{
+        height: 30px;
+        color: #8e8e8e;
+        fill: #8e8e8e;
+        pointer-events: none;
+    }
+
+    &__btn-name{
+        pointer-events: none;
+        font-size: 13px;
+        height: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 6px;
+        color: #8e8e8e;
+        letter-spacing: 1px;
+        text-align: center;
+
+    }
+    &__posts{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 15px;
+        justify-content: space-between;
+        list-style:none ;
+        margin: 0;
+        padding: 0;
+    }
+    &__posts-item{
+        padding: 0;
+        height: 300px;
+        cursor: pointer;
+    }
+    &__block{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    &__posts-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__posts-item *{
+        pointer-events: none;
+    }
+    &__posts-item video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__vidio-icon{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position:absolute;
+        right: 5px;
+        top: 5px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .content-post__posts-item{
+        height: 250px;
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (max-width:668px){
+    .content-post__posts-item{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:576px){
+    .content-post__posts-item{
+        height: 170px;
+        margin-bottom: 8px;
+    }
+
+    .content-post__posts{
+        margin-bottom: 34px;
+    }
+}
+
+@media screen and (max-width:468px){
+    .content-post__posts-item{
+        height: 140px;
+    }
+}
+
+
+
+@media screen and (max-width:576px){
+    .content-post__btn-name{
+        display: none;
+    }
+    .content-post__btn-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 33.3%;
+        &:not(:last-child){
+            margin-right: 0;
+        }
+    }
+
+    .content-post__btn-item svg{
+        width: 25px;
+        height: 25px;
+    }
+}
